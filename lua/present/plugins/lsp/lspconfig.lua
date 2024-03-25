@@ -14,7 +14,11 @@ return {
 
     local keymap = vim.keymap -- for conciseness
 
-    local opts = { noremap = true, silent = true }
+    local opts = {
+      noremap = true,
+      silent = true,
+    }
+
     local on_attach = function(client, bufnr)
       opts.buffer = bufnr
 
@@ -135,6 +139,15 @@ return {
     lspconfig["pyright"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+    })
+
+    -- configure c++ language
+    lspconfig["clangd"].setup({
+      on_attach = function(client, bufnr)
+        client.server_capabilities.signatureHelpProvider = false
+        on_attach(client, bufnr)
+      end,
+      capabilities = capabilities,
     })
 
     -- configure lua server (with special settings)
