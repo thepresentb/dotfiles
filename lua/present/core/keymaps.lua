@@ -25,12 +25,12 @@ keymap.set("n", "<leader>sd", "<C-w>s", { desc = "Split window horizontally" }) 
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" }) -- make split windows equal width & height
 keymap.set("n", "<leader>sj", "<C-w>j", { desc = "Switch to the down window" }) -- go to the down window
 keymap.set("n", "<leader>sk", "<C-w>k", { desc = "Switch to the up window" }) -- go to the up window
-keymap.set("n", "<leader>sw", "<C-w>l", { desc = "Switch to the right window" }) -- go to the right window
+keymap.set("n", "<leader>sl", "<C-w>w", { desc = "Switch to the right window" }) -- go to the right window
 keymap.set("n", "<leader>sh", "<C-w>h", { desc = "Switch to the left window" }) -- go to left window
-keymap.set("n", "<leader>sp", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
+keymap.set("n", "<leader>sc", "<cmd>close<CR>", { desc = "Close current split" }) -- close current split window
 
 keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" }) -- open new tab
-keymap.set("n", "<leader>tp", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
+keymap.set("n", "<leader>td", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- close current tab
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
